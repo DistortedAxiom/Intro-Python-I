@@ -11,8 +11,10 @@ for more info regarding list comprehensions.
 # Write a list comprehension to produce the array [1, 2, 3, 4, 5]
 
 y = []
-for x in range(5):
-    y.append(x+1)
+# for x in range(5):
+    # y.append(x+1)
+
+y = [i+1 for i in range(5)]
 
 print (y)
 
@@ -21,8 +23,10 @@ print (y)
 
 y = []
 
-for x in range(10):
-    y.append(x**3)
+# for x in range(10):
+    # y.append(x**3)
+
+y = [i**3 for i in range(10)]
 
 print(y)
 
@@ -32,8 +36,10 @@ print(y)
 a = ["foo", "bar", "baz"]
 
 y = []
-for x in a:
-    y.append(x.upper())
+# for x in a:
+    # y.append(x.upper())
+
+y = [i.upper() for i in a ]
 
 print(y)
 
@@ -43,6 +49,6 @@ print(y)
 x = input("Enter comma-separated numbers: ").split(',')
 
 # What do you need between the square brackets to make it work?
-y = [num for num in x if int(num) % 2 == 0 ]
+y = [i for i in x if int(i) % 2 == 0 ]
 
 print(y)

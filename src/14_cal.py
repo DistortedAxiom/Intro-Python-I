@@ -30,3 +30,33 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+current = str(datetime.date(datetime.utcnow()))
+
+input = (sys.argv)
+input.pop(0)
+
+def makeCalendar():
+    splitted = current.split('-')
+    print(splitted)
+    print(input)
+
+    month = int(splitted[1])
+    year = int(splitted[2])
+
+    if (len(input) > 0):
+        if(len(input) > 1):
+            splitted[1] = input[0]
+            splitted[0] = input[1]
+            month = int(splitted[1])
+            year = int(splitted[0])
+            print(calendar.month(year, month))
+        else:
+            splitted[1] = input[0]
+            month = int(splitted[1])
+            year = int(splitted[0])
+            print(calendar.month(year, month))
+    else:
+        print(calendar.month(year, month))
+
+makeCalendar()
